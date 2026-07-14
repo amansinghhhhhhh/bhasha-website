@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && copy /Y \"dist\\index.vite.html\" \"index.html\"",
+    "build": "vite build && copy /Y \"dist\\index.vite.html\" \"index.html\" && if exist \"bhasha\" (rmdir /S /Q \"bhasha\") && xcopy /E /I /Y \"dist\\bhasha\" \"bhasha\"",
     "preview": "vite preview"
   },
   "dependencies": {
