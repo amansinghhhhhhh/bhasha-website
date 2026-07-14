@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxY9lYEgSuJfsdzRUrjFJbtuuY2YKwta6CNNcH_7hQhxKbI5BeqUXsmCLZRUpQxHnmm/exec';
+
 export default function PopupForm({ isOpen, onClose, seats }) {
   const [submitted, setSubmitted] = useState(false);
   const overlayRef = useRef(null);
@@ -13,8 +15,17 @@ export default function PopupForm({ isOpen, onClose, seats }) {
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    formData.append('e_gs_SheetName', 'language-courses');
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(formData)
+      });
+    } catch (_) {}
     setSubmitted(true);
     setTimeout(() => {
       onClose();
@@ -49,21 +60,21 @@ export default function PopupForm({ isOpen, onClose, seats }) {
               <div className="form-row">
                 <div className="form-group">
                   <label>Full Name *</label>
-                  <input type="text" placeholder="Your name" required />
+                  <input type="text" name="full_name" placeholder="Your name" required />
                 </div>
                 <div className="form-group">
                   <label>Phone Number *</label>
-                  <input type="tel" placeholder="+91 98765 43210" required />
+                  <input type="tel" name="phone" placeholder="+91 98765 43210" required />
                 </div>
               </div>
               <div className="form-group">
                 <label>Email Address</label>
-                <input type="email" placeholder="your@email.com" />
+                <input type="email" name="email" placeholder="your@email.com" />
               </div>
               <div className="form-row">
                 <div className="form-group">
                   <label>Current German Level</label>
-                  <select>
+                  <select name="german_level">
                     <option value="">Select level</option>
                     <option>Complete Beginner</option>
                     <option>A1 Beginner</option>
@@ -74,7 +85,7 @@ export default function PopupForm({ isOpen, onClose, seats }) {
                 </div>
                 <div className="form-group">
                   <label>Your Goal</label>
-                  <select>
+                  <select name="goal">
                     <option value="">Select goal</option>
                     <option>Study Abroad in Germany</option>
                     <option>Goethe / TELC Certification</option>
