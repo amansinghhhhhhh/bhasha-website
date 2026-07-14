@@ -1,0 +1,2917 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Learn German in Pune | Bhasha World – Goethe Certified Training</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --brand-primary: #003e9b;
+    --brand-dark: #001a3d;
+    --brand-accent: #e8f0fe;
+    --brand-bg: #FFFFFF;
+    --brand-text: #0a1628;
+    --brand-text-subtle: #4a5568;
+    --german-gold: #FFCC00;
+    --german-red: #DD0000;
+    --german-black: #1a1a1a;
+    --urgency-red: #e53e3e;
+    --success-green: #22c55e;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  #levels, #offers, #reviews, #faq { scroll-margin-top: 90px; }
+  body { font-family: var(--font-body); background: var(--brand-bg); color: var(--brand-text); overflow-x: hidden; }
+
+  /* ── TOP URGENCY BAR ── */
+  .urgency-bar-wrap { position: sticky; top: 0; z-index: 1000; }
+  .urgency-bar {
+    background: linear-gradient(90deg, #dc2626, #b91c1c, #991b1b);
+    background-size: 300% 100%;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(220,38,38,.3);
+    animation: urg-slide .6s ease, urg-shift 4s ease-in-out infinite;
+  }
+  .urgency-bar span.fire { font-size: 18px; margin: 0 8px; display: inline-block; animation: urg-fire 1s ease-in-out infinite; }
+  .urgency-bar .urg-track {
+    display: flex;
+    white-space: nowrap;
+    animation: urg-scroll 25s linear infinite;
+    gap: 0;
+    padding-left: 24px;
+  }
+  .urgency-bar .urg-track:hover { animation-play-state: paused; }
+  .urgency-bar .urg-track > span { display: flex; gap: 0; white-space: nowrap; align-items: center; }
+  .urg-sep { display: inline-block; padding: 0 28px; opacity: .3; font-size: 20px; }
+  @keyframes urg-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .german-stripe-top { height: 4px; display: block; line-height: 0; font-size: 0; background: linear-gradient(90deg, var(--german-black) 33.3%, var(--german-red) 33.3% 66.6%, var(--german-gold) 66.6%); margin: 0; padding: 0; }
+  @keyframes urg-shift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  @keyframes urg-fire { 0%,100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.2) rotate(5deg); } }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed;
+    top: 52px;
+    left: 5%;
+    right: 5%;
+    z-index: 1001;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 16px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-logo img { height: 46px; width: auto; object-fit: contain; }
+  .nav-links-wrap {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,.04);
+    padding: 4px;
+    border-radius: 50px;
+    border: 1px solid rgba(0,0,0,.05);
+  }
+  .nav-links-wrap a {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 50px;
+    transition: all .3s;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .nav-links-wrap a:hover { background: var(--brand-primary); color: #fff; }
+  .btn-shimmer { position: relative; overflow: hidden; }
+  .btn-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+    transform: translateX(-100%);
+    animation: btn-shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .btn-shimmer:hover::after { display: none; }
+  @keyframes btn-shimmer {
+    0% { transform: translateX(-100%); }
+    20% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+  .btn-nav-demo {
+    background: linear-gradient(135deg, var(--german-gold), #f59e0b);
+    border: none;
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .3s;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 16px rgba(255,204,0,.3);
+    animation: nav-urg 2s ease-in-out infinite;
+  }
+  .btn-nav-demo:hover { background: linear-gradient(135deg, #f59e0b, #d97706); color: #000; box-shadow: 0 6px 24px rgba(245,158,11,.5); transform: scale(1.03); animation: none; }
+  .btn-nav-enroll {
+    background: linear-gradient(135deg, var(--german-red), #b91c1c);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .3s;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 20px rgba(220,38,38,.35);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-nav-enroll::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+    transform: translateX(-100%);
+    animation: nav-shimmer 2.5s ease-in-out infinite;
+  }
+  .btn-nav-enroll:hover { background: linear-gradient(135deg, #b91c1c, #991b1b); transform: scale(1.03); box-shadow: 0 6px 28px rgba(220,38,38,.5); }
+  @keyframes nav-urg {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,204,0,.4); }
+    50% { box-shadow: 0 0 0 6px rgba(255,204,0,0); }
+  }
+  @keyframes nav-shimmer {
+    0% { transform: translateX(-100%); }
+    20% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+  .nav-toggle { display: none; flex-direction: column; gap: 4px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .nav-toggle span { width: 22px; height: 2px; background: var(--brand-dark); border-radius: 2px; transition: all .3s; }
+  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+  @media(max-width: 900px) {
+    nav { padding: 8px 16px; top: 40px; }
+    .nav-logo img { height: 36px; }
+    .nav-links-wrap { display: none; position: fixed; top: 70px; left: 5%; right: 5%; background: rgba(255,255,255,.98); backdrop-filter: blur(16px); flex-direction: column; padding: 20px; gap: 8px; border-radius: 16px; border: 1px solid rgba(0,0,0,.08); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+    .nav-links-wrap.open { display: flex; }
+    .nav-links-wrap a { width: 100%; text-align: center; padding: 12px; }
+    .nav-toggle { display: flex; }
+    .nav-cta-group { display: none; }
+    .nav-cta-group.open { display: flex; flex-direction: column; gap: 8px; position: fixed; top: auto; bottom: 20px; left: 5%; right: 5%; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 10% 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("bhasha/hero bg image/hero.png") center 30% / cover no-repeat;
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.5) 100%);
+    z-index: 0;
+  }
+  .hero-content {
+    z-index: 2;
+    position: relative;
+  }
+  @keyframes hero-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-content > * { animation: hero-rise .9s cubic-bezier(.16,1,.3,1) both; }
+  .hero-content > *:nth-child(1) { animation-delay: .05s; }
+  .hero-content > *:nth-child(2) { animation-delay: .15s; }
+  .hero-content > *:nth-child(3) { animation-delay: .28s; }
+  .hero-content > *:nth-child(4) { animation-delay: .4s; }
+  .hero-content > *:nth-child(5) { animation-delay: .5s; }
+  .hero-content > *:nth-child(6) { animation-delay: .6s; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,204,0,.12);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,204,0,.35);
+    color: var(--german-gold);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3.5vw, 50px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    letter-spacing: -.5px;
+    text-shadow: 0 2px 20px rgba(0,0,0,.3);
+  }
+  .hero h1 .highlight {
+    color: var(--german-gold);
+    display: inline-block;
+    position: relative;
+    font-weight: 900;
+  }
+  .hero h1 .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--german-gold);
+    border-radius: 2px;
+  }
+  .hero-sub {
+    color: rgba(255,255,255,.9);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 10px rgba(0,0,0,.2);
+  }
+  .hero-sub-sub {
+    color: var(--german-gold);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 10px rgba(0,0,0,.2);
+  }
+  .hero-certs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .cert-badge {
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,.18);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    transition: all .25s;
+  }
+  .cert-badge:hover { background: rgba(255,255,255,.15); border-color: var(--german-gold); }
+  .hero-cta-group { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--german-gold), #f59e0b);
+    color: #000;
+    padding: 16px 34px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all .25s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 24px rgba(255,204,0,.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,204,0,.5); }
+  .btn-secondary {
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(255,255,255,.3);
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .25s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,.15); border-color: var(--german-gold); color: var(--german-gold); }
+  .wa-cta-btn {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #fff !important;
+    gap: 8px;
+  }
+  .wa-cta-btn:hover {
+    background: #1ebe5d !important;
+    border-color: #1ebe5d !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(37,211,102,.4);
+    transform: translateY(-2px);
+  }
+  .hero-trust {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 8px; }
+  .trust-item .num { color: var(--german-gold); font-weight: 900; font-size: 20px; }
+  .trust-item .label { color: rgba(255,255,255,.75); font-size: 13px; }
+
+  /* ── COUNTDOWN SECTION ── */
+  .countdown-section {
+    background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+    padding: 32px 10%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .countdown-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--german-black), var(--german-red), var(--german-gold));
+  }
+  .countdown-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(255,200,200,.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(185,28,28,.3) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .countdown-inner { margin: 0 auto; position: relative; z-index: 1; }
+  .countdown-label {
+    color: rgba(255,255,255,.6);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+  }
+  .countdown-label .clock-icon {
+    display: inline-block;
+    animation: clock-spin 2s ease-in-out infinite;
+  }
+  @keyframes clock-spin {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(15deg) scale(1.1); }
+    75% { transform: rotate(-10deg) scale(1.1); }
+  }
+  .countdown-label span {
+    color: var(--german-gold);
+    background: rgba(255,204,0,.12);
+    padding: 2px 12px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+  }
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .time-unit {
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 14px;
+    padding: 16px 22px;
+    min-width: 78px;
+    text-align: center;
+    transition: all .3s;
+  }
+  .time-unit:hover {
+    background: rgba(255,255,255,.14);
+    transform: translateY(-3px);
+    border-color: var(--german-gold);
+  }
+  .time-unit .num {
+    display: block;
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    animation: cd-flip .8s ease;
+  }
+  .time-unit .unit-label {
+    display: block;
+    font-size: 10px;
+    color: rgba(255,255,255,.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 6px;
+  }
+  .time-separator {
+    font-size: 34px;
+    font-weight: 300;
+    color: rgba(255,255,255,.2);
+    align-self: center;
+    padding-bottom: 8px;
+  }
+  .seats-counter {
+    color: rgba(255,255,255,.85);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .seats-counter .seats-num {
+    color: var(--german-gold);
+    font-weight: 900;
+    font-size: 20px;
+    display: inline-block;
+    animation: seats-pop 1.2s ease-in-out infinite;
+  }
+  @keyframes seats-pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); color: #fff; }
+  }
+  .progress-wrap { margin: 0 auto; }
+  .progress-bar-bg {
+    background: rgba(255,255,255,.12);
+    border-radius: 50px;
+    height: 6px;
+    overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%;
+    width: 75%;
+    background: linear-gradient(90deg, var(--german-gold), #ff6b35);
+    border-radius: 50px;
+    animation: cd-progress 2s ease-out forwards;
+    position: relative;
+  }
+  .progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+    animation: cd-shimmer 2.5s ease-in-out infinite;
+  }
+  @keyframes cd-progress { from { width: 0; } to { width: 75%; } }
+  @keyframes cd-shimmer {
+    0% { transform: translateX(-100%); }
+    20% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes cd-flip {
+    0% { transform: translateY(-8px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+    width: 78%;
+    animation: fill-progress 2s ease forwards;
+  }
+  @keyframes fill-progress { from{width:0} to{width:78%} }
+
+  /* ── SECTION COMMON ── */
+  section { padding: 80px 10%; }
+  .section-label {
+    text-align: center;
+    color: var(--brand-primary);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 900;
+    text-align: center;
+    color: var(--brand-dark);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--brand-text-subtle);
+    font-size: 17px;
+    margin: 0 auto 56px;
+    line-height: 1.7;
+  }
+
+  /* ── SPLIT IMAGE SECTION ── */
+  .split-section { background: #fff; padding: 76px 10% 88px; }
+  .split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .split-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3.1;
+    box-shadow: 0 30px 60px -20px rgba(0,37,41,.35);
+  }
+  .split-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .split-image:hover img { transform: scale(1.05); }
+  .split-image .split-tag {
+    position: absolute;
+    left: 18px; bottom: 18px;
+    background: rgba(0,37,41,.85);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    padding: 9px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .split-image .split-tag .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--urgency-red);
+    box-shadow: 0 0 0 rgba(229,62,62,.6);
+    animation: dot-ping 1.6s ease-in-out infinite;
+  }
+  @keyframes dot-ping { 0%,100%{box-shadow:0 0 0 0 rgba(229,62,62,.5)} 50%{box-shadow:0 0 0 6px rgba(229,62,62,0)} }
+  .split-image::after {
+    content: '';
+    position: absolute;
+    top: -18px; right: -18px;
+    width: 84px; height: 84px;
+    border: 3px solid var(--german-gold);
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .split-copy .section-label { text-align: left; margin-bottom: 10px; }
+  .split-copy h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+    color: var(--brand-dark);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -.3px;
+  }
+  .split-copy p.lead { color: var(--brand-text-subtle); font-size: 16px; line-height: 1.75; margin-bottom: 24px; }
+  .split-points { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+  .split-points li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--brand-text); }
+  .split-points li .ico {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    background: rgba(0,62,155,.15);
+    color: var(--brand-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+  }
+  @media(max-width: 860px) {
+    .split-grid { grid-template-columns: 1fr; gap: 32px; }
+    .split-section { padding: 60px 10%; }
+  }
+
+  /* ── PHOTO BANNER (STUDY ABROAD) ── */
+  .abroad-banner {
+    position: relative;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    padding: 90px 10%;
+    overflow: hidden;
+  }
+  .abroad-banner img.bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    animation: hero-kenburns 22s ease-in-out infinite alternate;
+  }
+  .abroad-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(0,20,23,.95) 0%, rgba(0,37,41,.75) 40%, rgba(0,37,41,.25) 75%, rgba(0,37,41,.15) 100%);
+    z-index: 1;
+  }
+  .abroad-content { position: relative; z-index: 2; }
+  .abroad-content .section-label { text-align: left; margin-bottom: 12px; }
+  .abroad-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3.4vw, 44px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.18;
+    margin-bottom: 16px;
+    letter-spacing: -.4px;
+  }
+  .abroad-content p { color: rgba(255,255,255,.8); font-size: 17px; line-height: 1.75; margin-bottom: 30px; }
+  .abroad-stats { display: flex; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
+  .abroad-stats .stat-num { color: var(--german-gold); font-family: var(--font-heading); font-size: 30px; font-weight: 800; line-height: 1; }
+  .abroad-stats .stat-label { color: rgba(255,255,255,.65); font-size: 13px; margin-top: 4px; }
+  @media(max-width: 700px) { .abroad-banner { padding: 70px 6%; min-height: auto; } }
+
+  /* ── OFFERS SECTION ── */
+  .offers-section {
+    background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+    padding: 80px 10%;
+  }
+
+  /* ── DEMO HERO CTA ── */
+  .demo-hero {
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 48px 36px;
+    box-shadow: 0 8px 40px rgba(0,0,0,.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .demo-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--german-black), var(--german-red), var(--german-gold));
+  }
+  .demo-hero > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: offer-rise .6s ease forwards;
+  }
+  .demo-hero > *:nth-child(1) { animation-delay: .1s; }
+  .demo-hero > *:nth-child(2) { animation-delay: .2s; }
+  .demo-hero > *:nth-child(3) { animation-delay: .35s; }
+  .demo-hero > *:nth-child(4) { animation-delay: .5s; }
+  .demo-hero > *:nth-child(5) { animation-delay: .65s; }
+  @keyframes offer-rise {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .demo-tagline {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--german-black);
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+  .demo-tagline strong {
+    color: var(--german-red);
+    font-weight: 800;
+  }
+  .demo-card {
+    background: linear-gradient(135deg, #fef9e7 0%, #fef3c7 100%);
+    border: 2px dashed var(--german-gold);
+    border-radius: 18px;
+    padding: 28px 24px;
+    margin-bottom: 28px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(255,204,0,.08);
+  }
+  .demo-card::after {
+    content: '🛡️';
+    position: absolute;
+    top: -12px; right: -8px;
+    font-size: 28px;
+    transform: rotate(15deg);
+  }
+  .demo-card-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #92400e;
+    margin-bottom: 6px;
+  }
+  .demo-price {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--german-black);
+    line-height: 1;
+    margin-bottom: 10px;
+    animation: price-pop 2s ease-in-out infinite;
+    font-family: var(--font-heading);
+  }
+  @keyframes price-pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); color: var(--german-red); }
+  }
+  .demo-price span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+  .demo-terms {
+    font-size: 14px;
+    color: var(--german-black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+  .demo-terms .sep { color: var(--german-red); font-weight: 700; }
+  .demo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .demo-btn {
+    width: auto !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px !important;
+    font-size: 16px !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, var(--brand-primary), #00266b) !important;
+    box-shadow: 0 4px 20px rgba(0,62,155,.25);
+    animation: demo-pulse 2.2s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+  }
+  .demo-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+    transform: translateX(-100%);
+    animation: demo-shimmer 3s ease-in-out infinite;
+  }
+  .demo-btn:hover {
+    box-shadow: 0 6px 28px rgba(0,62,155,.4) !important;
+    transform: translateY(-2px) !important;
+    animation: none !important;
+  }
+  .demo-btn:hover::after { display: none; }
+  @keyframes demo-pulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(0,62,155,.25); transform: scale(1); }
+    50% { box-shadow: 0 4px 36px rgba(0,62,155,.45), 0 0 60px rgba(0,62,155,.15); transform: scale(1.03); }
+  }
+  @keyframes demo-shimmer {
+    0% { transform: translateX(-100%); }
+    20% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+  .wa-cta-btn.demo-wa {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px !important;
+    font-size: 16px !important;
+    border-radius: 12px !important;
+    font-weight: 700;
+    text-decoration: none;
+    animation: wa-sway 3s ease-in-out infinite;
+  }
+  .wa-cta-btn.demo-wa:hover {
+    animation: none !important;
+    transform: translateY(-2px) !important;
+  }
+  @keyframes wa-sway {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+  .demo-trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--brand-text-subtle);
+    font-weight: 500;
+  }
+  .demo-trust span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f9fafb;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1px solid #f3f4f6;
+  }
+  .pricing-anchor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+    margin-top: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pricing-card {
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 36px 28px 32px;
+    text-align: center;
+    transition: all .4s cubic-bezier(.4,0,.2,1);
+    opacity: 0;
+    transform: translateY(24px);
+    animation: price-in .6s ease forwards;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,.04);
+  }
+  .pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--german-black), var(--german-red), var(--german-gold));
+  }
+  .pricing-card::after {
+    content: 'BEST VALUE';
+    position: absolute;
+    top: 20px; right: -32px;
+    background: var(--german-red);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 36px;
+    transform: rotate(45deg);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  .pricing-card.featured::after { opacity: 1; }
+  .pricing-card:nth-child(1) { animation-delay: .2s; }
+  .pricing-card:nth-child(2) { animation-delay: .4s; }
+  @keyframes price-in {
+    0% { opacity: 0; transform: translateY(24px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .pricing-card.featured {
+    border-color: var(--german-gold);
+    border-width: 2px;
+    box-shadow: 0 8px 40px rgba(255,204,0,.15);
+    transform: scale(1.03);
+  }
+  .pricing-card.featured:hover { transform: scale(1.03) translateY(-6px); }
+  .pricing-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,.1); }
+  .pricing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 18px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+  }
+  .pricing-card.featured .pricing-badge {
+    background: linear-gradient(135deg, #fef3c7, #f59e0b);
+    color: #000;
+    box-shadow: 0 2px 12px rgba(245,158,11,.3);
+  }
+  .pricing-title {
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--german-black);
+    margin-bottom: 4px;
+    font-family: var(--font-heading);
+  }
+  .pricing-sub {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 20px;
+  }
+  .pricing-old {
+    font-size: 16px;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-bottom: 2px;
+  }
+  .pricing-new {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--german-black);
+    line-height: 1;
+    margin-bottom: 4px;
+    animation: price-pop 2s ease-in-out infinite;
+    font-family: var(--font-heading);
+  }
+  @keyframes price-pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); color: var(--german-red); }
+  }
+  .pricing-save {
+    display: inline-block;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 50px;
+    margin-bottom: 22px;
+  }
+  .pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding: 0 4px;
+  }
+  .pricing-features span {
+    font-size: 14px;
+    color: var(--brand-text);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .pricing-features span:last-child { border-bottom: none; }
+  .pricing-card .btn-offer {
+    width: 100%;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--german-black), #333);
+    border-radius: 14px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: .3px;
+  }
+  .pricing-card .btn-offer:hover { background: linear-gradient(135deg, var(--german-red), #b91c1c); }
+  .pricing-card.featured .btn-offer {
+    background: linear-gradient(135deg, var(--german-gold), #f59e0b);
+    color: #000;
+    box-shadow: 0 4px 20px rgba(255,204,0,.3);
+  }
+  .pricing-card.featured .btn-offer:hover { background: linear-gradient(135deg, #f59e0b, #d97706); box-shadow: 0 6px 28px rgba(245,158,11,.4); }
+  .offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .offer-card {
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px 28px;
+    position: relative;
+    transition: all .3s;
+    overflow: hidden;
+  }
+  .offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--german-black), var(--german-red), var(--german-gold));
+  }
+  .offer-card:hover { transform: translateY(-6px); border-color: var(--brand-primary); box-shadow: 0 20px 48px rgba(0,62,155,.2); }
+  .offer-card.featured {
+    border-color: var(--german-gold);
+    background: linear-gradient(135deg, #fffbeb 0%, #fff 100%);
+    box-shadow: 0 8px 32px rgba(255,204,0,.2);
+  }
+  .offer-badge {
+    position: absolute;
+    top: -1px; right: 24px;
+    background: var(--german-gold);
+    color: #000;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 0 0 8px 8px;
+  }
+  .offer-icon { font-size: 36px; margin-bottom: 16px; }
+  .offer-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--brand-dark);
+    margin-bottom: 8px;
+  }
+  .offer-sub { color: var(--brand-text-subtle); font-size: 14px; margin-bottom: 20px; line-height: 1.6; }
+  .offer-perks { list-style: none; margin-bottom: 24px; }
+  .offer-perks li {
+    padding: 7px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: var(--brand-text);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .offer-perks li:last-child { border-bottom: none; }
+  .offer-perks li .check { color: var(--success-green); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .offer-price-wrap { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; }
+  .offer-original { color: #aaa; text-decoration: line-through; font-size: 16px; }
+  .offer-price { font-size: 32px; font-weight: 900; color: var(--brand-dark); }
+  .offer-price span { font-size: 16px; color: var(--brand-text-subtle); }
+  .offer-discount-tag {
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 50px;
+    letter-spacing: .3px;
+  }
+  .btn-offer {
+    width: 100%;
+    background: linear-gradient(135deg, var(--brand-dark), #003d44);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .2s;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+  .btn-offer:hover { background: linear-gradient(135deg, #003d44, #005a64); transform: translateY(-1px); }
+  .btn-offer.gold {
+    background: linear-gradient(135deg, var(--german-gold), #f59e0b);
+    color: #000;
+  }
+  .btn-offer.gold:hover { box-shadow: 0 4px 20px rgba(255,204,0,.4); }
+  .offer-seats {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--urgency-red);
+    font-weight: 600;
+  }
+
+  /* ── BOOKING PRICE BOX ── */
+  .booking-box {
+    background: linear-gradient(135deg, #fff8e1, #fffde7);
+    border: 2px dashed var(--german-gold);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .booking-box .book-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #b45309;
+    margin-bottom: 4px;
+  }
+  .booking-box .book-amount {
+    font-size: 30px;
+    font-weight: 900;
+    color: #000;
+    line-height: 1;
+  }
+  .booking-box .book-amount span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+  .booking-box .book-note {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 4px;
+    font-style: italic;
+  }
+  .installment-strip {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #15803d;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .full-pay-strip {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: #1d4ed8;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* ── WHY US ── */
+  .why-section {
+    background: linear-gradient(135deg, #0a1628 0%, #001a3d 30%, #002244 60%, #001a3d 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .why-section::before {
+    content: '';
+    position: absolute;
+    top: -30%; left: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,204,0,.04) 0%, transparent 60%);
+    pointer-events: none;
+    animation: why-glow-1 8s ease-in-out infinite alternate;
+  }
+  .why-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%; right: -5%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(0,62,155,.1) 0%, transparent 60%);
+    pointer-events: none;
+    animation: why-glow-2 10s ease-in-out infinite alternate;
+  }
+  @keyframes why-glow-1 {
+    0% { transform: translate(0, 0) scale(1); opacity: .6; }
+    100% { transform: translate(60px, 40px) scale(1.2); opacity: 1; }
+  }
+  @keyframes why-glow-2 {
+    0% { transform: translate(0, 0) scale(1); opacity: .4; }
+    100% { transform: translate(-40px, -30px) scale(1.15); opacity: .8; }
+  }
+  .why-section .section-title { color: #fff; }
+  .why-section .section-sub { color: rgba(255,255,255,.5); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .why-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 20px;
+    padding: 32px 28px;
+    transition: all .4s cubic-bezier(.4,0,.2,1);
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px) scale(.95);
+    animation: why-card-in .6s ease forwards;
+  }
+  .why-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255,204,0,.08), transparent 40%, transparent 60%, rgba(0,62,155,.08));
+    opacity: 0;
+    transition: opacity .4s;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .why-card:nth-child(1) { animation-delay: .05s; }
+  .why-card:nth-child(2) { animation-delay: .12s; }
+  .why-card:nth-child(3) { animation-delay: .2s; }
+  .why-card:nth-child(4) { animation-delay: .28s; }
+  .why-card:nth-child(5) { animation-delay: .36s; }
+  .why-card:nth-child(6) { animation-delay: .44s; }
+  .why-card:nth-child(7) { animation-delay: .52s; }
+  .why-card:nth-child(8) { animation-delay: .6s; }
+  @keyframes why-card-in {
+    0% { opacity: 0; transform: translateY(30px) scale(.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .why-card:hover {
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,204,0,.3);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+  }
+  .why-card:hover::before { opacity: 1; }
+  .why-card .why-icon-wrap {
+    width: 52px; height: 52px;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+    transition: all .4s cubic-bezier(.34,1.56,.64,1);
+    position: relative;
+  }
+  .why-card:hover .why-icon-wrap {
+    transform: scale(1.1) rotate(-8deg);
+    border-radius: 12px;
+  }
+  .why-card .why-icon-wrap svg {
+    width: 26px; height: 26px;
+    transition: all .3s;
+  }
+  .why-card:hover .why-icon-wrap svg {
+    transform: scale(1.15);
+  }
+  .why-card:nth-child(1) .why-icon-wrap { background: linear-gradient(135deg, rgba(249,115,22,.2), rgba(249,115,22,.05)); }
+  .why-card:nth-child(1) .why-icon-wrap svg { fill: #f97316; }
+  .why-card:nth-child(2) .why-icon-wrap { background: linear-gradient(135deg, rgba(34,197,94,.2), rgba(34,197,94,.05)); }
+  .why-card:nth-child(2) .why-icon-wrap svg { fill: #22c55e; }
+  .why-card:nth-child(3) .why-icon-wrap { background: linear-gradient(135deg, rgba(234,179,8,.2), rgba(234,179,8,.05)); }
+  .why-card:nth-child(3) .why-icon-wrap svg { fill: #eab308; }
+  .why-card:nth-child(4) .why-icon-wrap { background: linear-gradient(135deg, rgba(168,85,247,.2), rgba(168,85,247,.05)); }
+  .why-card:nth-child(4) .why-icon-wrap svg { fill: #a855f7; }
+  .why-card:nth-child(5) .why-icon-wrap { background: linear-gradient(135deg, rgba(6,182,212,.2), rgba(6,182,212,.05)); }
+  .why-card:nth-child(5) .why-icon-wrap svg { fill: #06b6d4; }
+  .why-card:nth-child(6) .why-icon-wrap { background: linear-gradient(135deg, rgba(59,130,246,.2), rgba(59,130,246,.05)); }
+  .why-card:nth-child(6) .why-icon-wrap svg { fill: #3b82f6; }
+  .why-card:nth-child(7) .why-icon-wrap { background: linear-gradient(135deg, rgba(236,72,153,.2), rgba(236,72,153,.05)); }
+  .why-card:nth-child(7) .why-icon-wrap svg { fill: #ec4899; }
+  .why-card:nth-child(8) .why-icon-wrap { background: linear-gradient(135deg, rgba(34,197,94,.2), rgba(34,197,94,.05)); }
+  .why-card:nth-child(8) .why-icon-wrap svg { fill: #22c55e; }
+  .why-card .why-icon-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    background: inherit;
+    opacity: .15;
+    filter: blur(8px);
+    z-index: -1;
+    transition: opacity .3s;
+  }
+  .why-card:hover .why-icon-wrap::after { opacity: .3; }
+  .why-title {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    letter-spacing: -.2px;
+  }
+  .why-desc {
+    color: rgba(255,255,255,.5);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ── WHO IS IT FOR ── */
+  .who-section { background: linear-gradient(160deg, #f0f5ff 0%, #e8f0fe 50%, #ffffff 100%); position: relative; overflow: hidden; }
+  .who-section::before {
+    content: '';
+    position: absolute; top: -40%; right: -20%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(0,62,155,.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .who-section::after {
+    content: '';
+    position: absolute; bottom: -30%; left: -10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(255,204,0,.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .who-card {
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,62,155,.1);
+    border-radius: 20px;
+    padding: 32px 24px 28px;
+    text-align: center;
+    transition: all .35s cubic-bezier(.4,0,.2,1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: who-up .6s ease forwards;
+  }
+  .who-card:nth-child(1) { animation-delay: .1s; }
+  .who-card:nth-child(2) { animation-delay: .25s; }
+  .who-card:nth-child(3) { animation-delay: .4s; }
+  .who-card:nth-child(4) { animation-delay: .55s; }
+  @keyframes who-up {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .who-card:hover {
+    border-color: var(--brand-primary);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0,62,155,.15);
+    background: rgba(255,255,255,.95);
+  }
+  .who-icon-wrap {
+    width: 64px; height: 64px;
+    border-radius: 18px;
+    margin: 0 auto 18px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    transition: transform .35s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  }
+  .who-card:nth-child(1) .who-icon-wrap { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+  .who-card:nth-child(2) .who-icon-wrap { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+  .who-card:nth-child(3) .who-icon-wrap { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
+  .who-card:nth-child(4) .who-icon-wrap { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
+  .who-card:hover .who-icon-wrap { transform: scale(1.1) rotate(-6deg); }
+  .who-title { font-weight: 800; font-size: 16px; color: var(--brand-dark); margin-bottom: 8px; }
+  .who-desc { color: var(--brand-text-subtle); font-size: 14px; line-height: 1.7; }
+
+  /* ── SOCIAL PROOF (Slider) ── */
+  .proof-section { background: linear-gradient(180deg, #f8fafc 0%, #fff 100%); }
+  .proof-slider-wrap {
+    position: relative;
+  }
+  .proof-grid {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+    padding: 4px 0;
+  }
+  .proof-grid::-webkit-scrollbar { display: none; }
+  .proof-grid.dragging { cursor: grabbing; scroll-snap-type: none; }
+  .proof-card {
+    flex: 0 0 calc(25% - 15px);
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 0;
+    position: relative;
+    transition: all .35s;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: proof-in .3s ease forwards;
+  }
+  .proof-card:nth-child(1) { animation-delay: .03s; }
+  .proof-card:nth-child(2) { animation-delay: .08s; }
+  .proof-card:nth-child(3) { animation-delay: .13s; }
+  .proof-card:nth-child(4) { animation-delay: .18s; }
+  .proof-card:nth-child(5) { animation-delay: .23s; }
+  .proof-card:nth-child(6) { animation-delay: .28s; }
+  @keyframes proof-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .proof-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,.06); transform: translateY(-4px); border-color: var(--brand-primary); }
+  .star-anim {
+    display: inline-block;
+    animation: star-pop 1.5s ease-in-out infinite;
+  }
+  @keyframes star-pop {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.3) rotate(10deg); }
+    50% { transform: scale(1.5) rotate(-5deg); }
+    75% { transform: scale(1.2) rotate(8deg); }
+  }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    color: var(--brand-primary);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .25s;
+  }
+  .slider-btn:hover { background: var(--brand-primary); color: #fff; border-color: var(--brand-primary); }
+  .slider-btn.prev { left: -22px; }
+  .slider-btn.next { right: -22px; }
+  @media (max-width: 900px) {
+    .proof-card { flex: 0 0 calc(50% - 10px); }
+  }
+  @media (max-width: 600px) {
+    .proof-card { flex: 0 0 85%; }
+    .slider-btn { display: none; }
+  }
+  .video-modal {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,.75); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s;
+  }
+  .video-modal.show { opacity: 1; pointer-events: auto; }
+  .video-modal-inner {
+    position: relative;
+    width: 90%; max-width: 800px;
+    border-radius: 16px; overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+  .video-modal-inner video { width: 100%; display: block; aspect-ratio: 16/9; }
+  .video-modal-close {
+    position: absolute; top: 12px; right: 12px; z-index: 10;
+    width: 36px; height: 36px;
+    background: rgba(0,0,0,.5); border: none;
+    color: #fff; font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+  }
+  .video-modal-close:hover { background: rgba(0,0,0,.8); }
+  .proof-card .proof-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+  .proof-card .proof-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px; height: 56px;
+    background: rgba(0,0,0,.55);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    transition: all .3s;
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,.2);
+  }
+  .proof-card:hover .proof-play { background: var(--brand-primary); transform: translate(-50%, -50%) scale(1.1); }
+  .proof-text { font-size: 14px; color: var(--brand-text); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+  .proof-author { display: flex; align-items: center; gap: 12px; }
+  .proof-name { font-weight: 700; font-size: 14px; color: var(--brand-dark); }
+  .proof-role { font-size: 11px; color: var(--brand-text-subtle); margin-top: 1px; }
+  .proof-stars { color: var(--german-gold); font-size: 12px; margin-top: 2px; letter-spacing: 2px; }
+
+  /* ── LEVELS ── */
+  .levels-section { background: #fff; }
+  .levels-track {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .level-step {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    position: relative;
+    padding: 20px 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: step-fade .5s ease forwards;
+  }
+  .level-step:nth-child(1) { animation-delay: .1s; }
+  .level-step:nth-child(2) { animation-delay: .25s; }
+  .level-step:nth-child(3) { animation-delay: .4s; }
+  .level-step:nth-child(4) { animation-delay: .55s; }
+  .level-step:nth-child(5) { animation-delay: .7s; }
+  .level-step:nth-child(6) { animation-delay: .85s; }
+  @keyframes step-fade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .level-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -10px;
+    top: 28px;
+    font-size: 20px;
+    color: var(--brand-primary);
+  }
+  .level-circle {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900;
+    font-size: 15px;
+    color: #fff;
+    transition: transform .3s;
+  }
+  .level-step:hover .level-circle { transform: scale(1.12); }
+  .level-circle.a1 { background: #22c55e; }
+  .level-circle.a2 { background: #84cc16; }
+  .level-circle.b1 { background: #eab308; }
+  .level-circle.b2 { background: #f97316; }
+  .level-circle.c1 { background: #ef4444; }
+  .level-circle.c2 { background: #8b5cf6; }
+  .level-name { font-weight: 700; font-size: 14px; color: var(--brand-dark); margin-bottom: 4px; }
+  .level-desc { font-size: 13px; color: var(--brand-text-subtle); }
+
+  /* ── TRAINERS ── */
+  .trainers-section {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, #002244 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .trainers-section::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -20%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(0,62,155,.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .trainers-section .section-title { color: #fff; }
+  .trainers-section .section-sub { color: rgba(255,255,255,.55); }
+  .trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .trainer-card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+    padding: 24px 18px 20px;
+    text-align: center;
+    transition: all .35s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: trainer-in .5s ease forwards;
+  }
+  .trainer-card:nth-child(1) { animation-delay: .1s; }
+  .trainer-card:nth-child(2) { animation-delay: .25s; }
+  .trainer-card:nth-child(3) { animation-delay: .4s; }
+  .trainer-card:nth-child(4) { animation-delay: .55s; }
+  @keyframes trainer-in {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .trainer-card:hover {
+    background: rgba(255,255,255,.08);
+    border-color: var(--brand-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.25);
+  }
+  .trainer-card img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    margin: 0 auto 16px;
+    display: block;
+    border-radius: 14px;
+    border: 2px solid rgba(255,255,255,.08);
+    transition: all .35s;
+  }
+  .trainer-card:hover img {
+    border-color: var(--brand-primary);
+    transform: scale(1.03);
+  }
+  .trainer-name { color: #fff; font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+  .trainer-role { color: rgba(255,255,255,.5); font-size: 13px; }
+
+  /* ── FAQ ── */
+  .faq-section { background: linear-gradient(180deg, #f8fafc 0%, #fff 100%); padding: 80px 10%; }
+  .faq-wrap { margin: 0 auto; }
+  .faq-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    padding: 0 24px;
+    transition: all .3s ease;
+    overflow: hidden;
+  }
+  .faq-item:last-child { margin-bottom: 0; }
+  .faq-item:hover { border-color: var(--brand-primary); box-shadow: 0 4px 20px rgba(0,0,0,.04); }
+  .faq-item.open { border-color: var(--brand-primary); box-shadow: 0 4px 24px rgba(0,62,155,.08); }
+  .faq-q {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    color: var(--brand-dark);
+    transition: all .25s;
+    gap: 16px;
+  }
+  .faq-item.open .faq-q { color: var(--brand-primary); }
+  .faq-q .idx {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--brand-primary);
+    margin-right: 8px;
+    font-variant-numeric: tabular-nums;
+    min-width: 22px;
+    background: rgba(0,62,155,.08);
+    padding: 2px 8px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .faq-q .q-text { flex: 1; }
+  .faq-q .arrow {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: rgba(0,62,155,.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--brand-primary);
+    transition: all .35s ease;
+    flex-shrink: 0;
+  }
+  .faq-item.open .faq-q .arrow { 
+    transform: rotate(45deg);
+    background: var(--brand-primary);
+    color: #fff;
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, padding .3s;
+    color: var(--brand-text-subtle);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .faq-a.open { max-height: 400px; }
+  .faq-a p { padding: 0 0 24px 34px; margin: 0; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: linear-gradient(135deg, #0a1628 0%, #001a3d 30%, #b91c1c 80%, #7f1d1d 100%);
+    background-size: 300% 300%;
+    padding: 80px 10%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: cta-bg 6s ease-in-out infinite;
+  }
+  @keyframes cta-bg { 0%,100% { background-position: 0% 50%; } 33% { background-position: 50% 50%; } 66% { background-position: 100% 50%; } }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: -40%; left: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,204,0,.06) 0%, transparent 60%);
+    pointer-events: none;
+    animation: cta-glow-1 7s ease-in-out infinite alternate;
+  }
+  .final-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -30%; right: -15%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(255,255,255,.04) 0%, transparent 60%);
+    pointer-events: none;
+    animation: cta-glow-2 9s ease-in-out infinite alternate;
+  }
+  @keyframes cta-glow-1 {
+    0% { transform: translate(0, 0) scale(1); opacity: .5; }
+    100% { transform: translate(40px, 30px) scale(1.3); opacity: 1; }
+  }
+  @keyframes cta-glow-2 {
+    0% { transform: translate(0, 0) scale(1); opacity: .3; }
+    100% { transform: translate(-30px, -20px) scale(1.2); opacity: .7; }
+  }
+  .final-cta > * { position: relative; z-index: 1; }
+  .cta-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cta-fade .7s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .cta-reveal:nth-child(2) { animation-delay: .1s; }
+  .cta-reveal:nth-child(3) { animation-delay: .2s; }
+  .cta-reveal:nth-child(4) { animation-delay: .35s; }
+  .cta-reveal:nth-child(5) { animation-delay: .5s; }
+  @keyframes cta-fade { to { opacity: 1; transform: translateY(0); } }
+  .german-stripe-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--german-black) 33.3%, var(--german-red) 33.3% 66.6%, var(--german-gold) 66.6%);
+    z-index: 2;
+  }
+  .final-cta .cta-urgency-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,204,0,.12);
+    border: 1px solid rgba(255,204,0,.3);
+    color: var(--german-gold);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    animation: cta-pulse-badge 2s ease-in-out infinite;
+  }
+  @keyframes cta-pulse-badge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,204,0,.2); }
+    50% { box-shadow: 0 0 0 8px rgba(255,204,0,0); }
+  }
+  .final-cta .cta-urgency-badge .cta-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: cta-dot-ping 1.4s ease-in-out infinite;
+  }
+  @keyframes cta-dot-ping {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,.4); }
+    50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  }
+  .final-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3.5vw, 52px);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .final-cta h2 span { 
+    color: var(--german-gold);
+    display: inline-block;
+    animation: cta-word-pop 2.5s ease-in-out infinite;
+  }
+  @keyframes cta-word-pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .final-cta p { color: rgba(255,255,255,.75); font-size: 17px; margin-bottom: 32px; }
+  .final-cta .cta-offer-box {
+    display: inline-block;
+    background: rgba(255,255,255,.04);
+    border: 1.5px solid rgba(255,204,0,.2);
+    border-radius: 16px;
+    padding: 20px 36px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(8px);
+    transition: all .3s;
+  }
+  .final-cta .cta-offer-box:hover {
+    border-color: var(--german-gold);
+    box-shadow: 0 8px 32px rgba(255,204,0,.1);
+  }
+  .final-cta .cta-offer-box .offer-label {
+    color: rgba(255,255,255,.6);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .final-cta .cta-offer-box .offer-amount {
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--german-gold);
+    line-height: 1;
+    font-family: var(--font-heading);
+  }
+  .final-cta .cta-offer-box .offer-amount span {
+    font-size: 16px;
+    color: rgba(255,255,255,.5);
+    font-weight: 600;
+  }
+  .final-cta .cta-offer-box .offer-terms {
+    font-size: 12px;
+    color: rgba(255,255,255,.4);
+    margin-top: 4px;
+  }
+  .final-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .guarantee-text {
+    margin-top: 20px;
+    color: rgba(255,255,255,.45);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  /* ── POPUP FORM ── */
+  .popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,20,50,.72);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+    backdrop-filter: blur(4px);
+  }
+  .popup-overlay.show { opacity: 1; visibility: visible; }
+  .popup-box {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 520px;
+    width: 100%;
+    overflow: hidden;
+    transform: scale(.92) translateY(30px);
+    transition: all .4s cubic-bezier(.34,1.56,.64,1);
+    box-shadow: 0 40px 80px rgba(0,0,0,.35);
+  }
+  .popup-overlay.show .popup-box { transform: scale(1) translateY(0); }
+  .popup-header {
+    background: linear-gradient(135deg, var(--brand-primary), #001a4d);
+    padding: 32px 32px 28px;
+    position: relative;
+  }
+  .popup-german-stripe {
+    height: 4px;
+    background: linear-gradient(90deg, var(--german-black) 33.3%, var(--german-red) 33.3% 66.6%, var(--german-gold) 66.6%);
+    margin-bottom: 18px;
+    border-radius: 2px;
+  }
+  .popup-header h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    font-family: var(--font-heading);
+  }
+  .popup-header p { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.5; }
+  .popup-urgency {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-top: 16px;
+    color: #fcd34d;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .popup-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: rgba(255,255,255,.12);
+    border: none;
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s;
+  }
+  .popup-close:hover { background: rgba(255,255,255,.25); transform: rotate(90deg); }
+  .popup-body { padding: 28px 32px 32px; }
+  .form-row { display: flex; gap: 14px; }
+  .form-row .form-group { flex: 1; }
+  .form-group { margin-bottom: 18px; }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand-dark);
+    margin-bottom: 6px;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 13px 14px;
+    font-size: 14px;
+    font-family: var(--font-body);
+    color: var(--brand-text);
+    transition: all .2s;
+    outline: none;
+    background: #f8fafc;
+  }
+  .form-group input:focus, .form-group select:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(0,62,155,.12);
+    background: #fff;
+  }
+  .btn-popup-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--brand-primary), #00266b);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .25s;
+    margin-top: 8px;
+    font-family: var(--font-heading);
+    letter-spacing: .3px;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-popup-submit::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+    transform: translateX(-100%);
+    animation: popup-shimmer 3s ease-in-out infinite;
+  }
+  .btn-popup-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,62,155,.35);
+  }
+  @keyframes popup-shimmer {
+    0% { transform: translateX(-100%); }
+    20% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+  .popup-privacy { text-align: center; margin-top: 14px; font-size: 12px; color: #94a3b8; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    padding: 12px 20px 12px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 6px 28px rgba(37,211,102,.45);
+    transition: all .3s cubic-bezier(.22,1,.36,1);
+  }
+  .wa-float svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  .wa-float:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(37,211,102,.55);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a1628;
+    color: rgba(255,255,255,.6);
+    padding: 0;
+    font-size: 14px;
+    position: relative;
+  }
+  footer .footer-stripe {
+    height: 4px;
+    background: linear-gradient(90deg, var(--german-black) 33.3%, var(--german-red) 33.3% 66.6%, var(--german-gold) 66.6%);
+  }
+  .footer-inner {
+    padding: 60px 10% 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    text-align: left;
+  }
+  .footer-brand .footer-logo {
+    margin-bottom: 12px;
+  }
+  .footer-brand .footer-logo img { height: 60px; width: auto; display: block; }
+  .footer-brand p { color: rgba(255,255,255,.5); line-height: 1.7; margin-bottom: 20px; font-size: 13px; }
+  .footer-social { display: flex; gap: 14px; }
+  .footer-social a {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.06);
+    border: 1.5px solid rgba(255,255,255,.1);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    padding: 10px;
+  }
+  .footer-social a svg {
+    width: 20px; height: 20px;
+    fill: currentColor;
+  }
+  .footer-social a:hover { background: var(--german-gold); color: #000; border-color: var(--german-gold); transform: translateY(-3px); box-shadow: 0 4px 16px rgba(255,204,0,.3); }
+  .footer-col h4 {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+  }
+  .footer-col a {
+    display: block;
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 4px 0;
+    transition: color .2s;
+  }
+  .footer-col a:hover { color: var(--german-gold); }
+  .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 12px;
+  }
+  .footer-contact-item .ico { flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+  .footer-contact-item a { color: rgba(255,255,255,.5); text-decoration: none; display: inline; padding: 0; }
+  .footer-contact-item a:hover { color: var(--german-gold); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: rgba(255,255,255,.3);
+  }
+  .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--german-gold); }
+  @media(max-width: 768px) {
+    .footer-inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+    .footer-social { justify-content: center; }
+    .footer-contact-item { justify-content: center; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width: 768px) {
+    .hero { min-height: auto; padding: 90px 10% 50px; }
+    .hero-cta-group { flex-direction: column; }
+    .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+    section { padding: 60px 10%; }
+    .time-unit .num { font-size: 28px; }
+    .final-cta-btns { flex-direction: column; align-items: center; }
+    .levels-track { gap: 8px; }
+    .level-step::after { display: none; }
+  }
+</style>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Learn German in Pune | Bhasha World – Goethe Certified Training" />
+<meta property="og:url" content="https://app.juma.ai/s/NvmSUiCDuyuQ" />
+<meta property="og:image" content="https://app.juma.ai/api/og/s/NvmSUiCDuyuQ" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Learn German in Pune | Bhasha World – Goethe Certified Training" />
+<meta name="twitter:image" content="https://app.juma.ai/api/og/s/NvmSUiCDuyuQ" />
+</head>
+<body>
+
+<div class="urgency-bar-wrap">
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <div class="urg-track">
+    <span>
+      <span class="fire">🔥</span>
+      <strong>JULY BATCH FILLING FAST</strong> — Only <strong id="seatsLeft">6</strong> seats left for German A1 batch starting 20 July 2026!
+      <span class="fire">🔥</span>
+      <span class="urg-sep">•</span> Use code <strong>GERMAN20</strong> for extra ₹500 off
+      <span class="urg-sep">•</span>
+    </span>
+    <span>
+      <span class="fire">🔥</span>
+      <strong>JULY BATCH FILLING FAST</strong> — Only <strong>6</strong> seats left for German A1 batch starting 20 July 2026!
+      <span class="fire">🔥</span>
+      <span class="urg-sep">•</span> Use code <strong>GERMAN20</strong> for extra ₹500 off
+      <span class="urg-sep">•</span>
+    </span>
+  </div>
+</div>
+  <div class="german-stripe-top"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <img src="https://bhashaworld.com/language-courses/assets/bhasa_logo-B3_iDOzc.webp" alt="Bhasha World" onerror="this.style.display='none'"/>
+  </div>
+  <div class="nav-links-wrap" id="navLinks">
+    <a href="#levels">Course Levels</a>
+    <a href="#offers">Pricing</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="nav-cta-group" id="navCta">
+    <a href="#" class="btn-nav-demo btn-shimmer" onclick="openPopup()">Book Free Demo</a>
+    <a href="#offers" class="btn-nav-enroll">Enroll Now</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content fade-up visible">
+    <div class="hero-badge">
+      #1 German Language Institute in Pune
+    </div>
+    <h1>
+      Master <span class="highlight">German</span><br/>
+      Get Hired, Study Abroad<br/>
+      Live Your Bigger Life
+    </h1>
+    <p class="hero-sub">
+      ISO-certified live training | Goethe & TELC exam prep | Small batches of 8
+    </p>
+    <p class="hero-sub-sub">Study abroad guidance — from A1 Beginner to C2 Advanced</p>
+    <div class="hero-certs">
+      <span class="cert-badge">✅ ISO Certified</span>
+      <span class="cert-badge">🏆 Goethe Prep</span>
+      <span class="cert-badge">📜 TELC Ready</span>
+      <span class="cert-badge">✈️ Visa Guidance</span>
+      <span class="cert-badge">⭐ 4.9/5 Rated</span>
+    </div>
+    <div class="hero-cta-group">
+      <a href="#" class="btn-primary btn-shimmer" onclick="openPopup(); return false;">
+        🎯 Book FREE Demo Class
+      </a>
+      <a href="#offers" class="btn-secondary btn-shimmer">
+        💰 View Offers & Pricing
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <span class="num">50K+</span>
+        <span class="label">Students Trained</span>
+      </div>
+      <div class="trust-item">
+        <span class="num">380+</span>
+        <span class="label">German Reviews</span>
+      </div>
+      <div class="trust-item">
+        <span class="num">20+</span>
+        <span class="label">Countries</span>
+      </div>
+      <div class="trust-item">
+        <span class="num">4.9★</span>
+        <span class="label">Rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown-section">
+  <div class="countdown-inner">
+    <div class="countdown-label"><span><span class="clock-icon">⏰</span> SPECIAL JULY OFFER ENDS IN</span> — Price goes up after this batch!</div>
+    <div class="countdown-timer">
+      <div class="time-unit">
+        <span class="num" id="cd-days">00</span>
+        <span class="unit-label">Days</span>
+      </div>
+      <span class="time-separator">:</span>
+      <div class="time-unit">
+        <span class="num" id="cd-hours">00</span>
+        <span class="unit-label">Hours</span>
+      </div>
+      <span class="time-separator">:</span>
+      <div class="time-unit">
+        <span class="num" id="cd-mins">00</span>
+        <span class="unit-label">Mins</span>
+      </div>
+      <span class="time-separator">:</span>
+      <div class="time-unit">
+        <span class="num" id="cd-secs">00</span>
+        <span class="unit-label">Secs</span>
+      </div>
+    </div>
+    <div class="seats-counter">
+      🔴 Only <span class="seats-num" id="seatsBar">6</span> seats remaining out of 8 in July batch
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OFFERS / DEMO CTA -->
+<section class="offers-section" id="offers">
+  <div class="section-label">🎁 LIMITED-TIME OFFERS</div>
+  <h2 class="section-title">Choose Your German Learning Journey</h2>
+  <p class="section-sub">All packages include live sessions, study material & Goethe exam prep. Hurry — prices increase when batch fills!</p>
+
+  <div class="pricing-anchor">
+    <div class="pricing-card">
+      <div class="pricing-badge">🎧 Online</div>
+      <div class="pricing-title">German Course (Online)</div>
+      <div class="pricing-sub">Live from anywhere</div>
+      <div class="pricing-old">₹15,000</div>
+      <div class="pricing-new">₹12,500</div>
+      <div class="pricing-save">Save ₹2,500</div>
+      <div class="pricing-features">
+        <span>✅ Live online classes</span>
+        <span>✅ Goethe/TELC prep</span>
+        <span>✅ Batch of 8</span>
+        <span>✅ 1-year access</span>
+      </div>
+      <a href="#" class="btn-offer btn-shimmer" onclick="openPopup(); return false;">🎯 Enroll Now</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">🏫 Offline</div>
+      <div class="pricing-title">German Course (Offline)</div>
+      <div class="pricing-sub">At our FC Road centre</div>
+      <div class="pricing-old">₹22,000</div>
+      <div class="pricing-new">₹18,000</div>
+      <div class="pricing-save">Save ₹4,000</div>
+      <div class="pricing-features">
+        <span>✅ Classroom at FC Road</span>
+        <span>✅ Goethe/TELC prep</span>
+        <span>✅ Batch of 8</span>
+        <span>✅ 1-year access</span>
+      </div>
+      <a href="#" class="btn-offer btn-shimmer" onclick="openPopup(); return false;">🎯 Enroll Now</a>
+    </div>
+  </div>
+
+  <div class="demo-hero fade-up">
+    <p class="demo-tagline">Book a free demo class today — no payment, no commitment. Just <strong>45 minutes</strong> that could change your career.</p>
+
+    <div class="demo-card">
+      <div class="demo-card-label">🔒 Secure Your Seat Right Now</div>
+      <div class="demo-price">₹2,000 <span>only</span></div>
+      <div class="demo-terms">
+        <span>Pay remaining amount after 3 days</span>
+        <span class="sep">|</span>
+        <span>Full pay = extra discount <span style="font-size:18px;">🎁</span></span>
+      </div>
+    </div>
+
+    <div class="demo-actions">
+      <a href="#" class="btn-offer demo-btn" onclick="openPopup(); return false;">🎯 Book FREE Demo Class</a>
+      <a href="https://wa.me/919876543210" target="_blank" class="wa-cta-btn demo-wa"><svg style="width:20px;height:20px;fill:#fff;vertical-align:middle;margin-right:8px;" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
+    </div>
+
+    <div class="demo-trust">
+      <span>🔒 No payment required for demo</span>
+      <span>⏰ Limited seats available</span>
+      <span>📞 Response within 5 mins</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section">
+  <div class="section-label" style="color:var(--german-gold);">WHY BHASHA WORLD</div>
+  <h2 class="section-title">German Learning That Actually Works</h2>
+  <p class="section-sub">Not just grammar drills. Real communication, real certification, real career outcomes.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 14a4 4 0 100-8 4 4 0 000 8zm0-2a2 2 0 110-4 2 2 0 010 4z"/><path d="M12 16c-4.418 0-8 1.79-8 4v1h16v-1c0-2.21-3.582-4-8-4z"/><path d="M19.07 4.93a10 10 0 00-14.14 0l1.41 1.41a8 8 0 0111.32 0l1.41-1.41z"/><path d="M21.9 7.9a13 13 0 00-19.8 0l1.41 1.41a11 11 0 0116.98 0L21.9 7.9z"/></svg></div>
+      <div class="why-title">Live Interactive Sessions</div>
+      <div class="why-desc">Real-time speaking practice with certified trainers — online & offline modes available.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+      <div class="why-title">Max 8 Students/Batch</div>
+      <div class="why-desc">Small batches mean personalized attention, faster progress, and more speaking time.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="why-title">Goethe & TELC Prep</div>
+      <div class="why-desc">Dedicated mock tests, exam strategies, and certification guidance from A1 to C2.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M18 3v2h-2V3H8v2H6V3H4v18h2v-2h2v2h8v-2h2v2h2V3h-2zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm10 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg></div>
+      <div class="why-title">Recorded Class Backup</div>
+      <div class="why-desc">Miss a session? Every class is recorded and available for 1 year on the platform.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div>
+      <div class="why-title">Visa & Passport Guidance</div>
+      <div class="why-desc">We go beyond language — help with student visas, documents, and abroad applications.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+      <div class="why-title">Cultural Immersion</div>
+      <div class="why-desc">Learn the culture, not just the language — films, conversations, real-life contexts.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+      <div class="why-title">Flexible Scheduling</div>
+      <div class="why-desc">Weekday & weekend batches with morning, evening, and night slots for working professionals.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+      <div class="why-title">ISO-Certified Curriculum</div>
+      <div class="why-desc">CEFR-aligned structured curriculum from A1 to C2 — internationally recognized standard.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section class="levels-section" id="levels">
+  <div class="section-label">GERMAN COURSE STRUCTURE</div>
+  <h2 class="section-title">Your A1 → C2 Roadmap 🗺️</h2>
+  <p class="section-sub">Every level builds on the last. Most students reach B2 in 12–14 months of consistent learning.</p>
+  <div class="levels-track">
+    <div class="level-step">
+      <div class="level-circle a1">A1</div>
+      <div class="level-name">Beginner</div>
+      <div class="level-desc">Basic greetings, intros, daily phrases</div>
+    </div>
+    <div class="level-step">
+      <div class="level-circle a2">A2</div>
+      <div class="level-name">Elementary</div>
+      <div class="level-desc">Simple conversations, travel German</div>
+    </div>
+    <div class="level-step">
+      <div class="level-circle b1">B1</div>
+      <div class="level-name">Intermediate</div>
+      <div class="level-desc">Work conversations, Goethe B1 prep</div>
+    </div>
+    <div class="level-step">
+      <div class="level-circle b2">B2</div>
+      <div class="level-name">Upper-Intermediate</div>
+      <div class="level-desc">Job-ready, study abroad eligible</div>
+    </div>
+    <div class="level-step">
+      <div class="level-circle c1">C1</div>
+      <div class="level-name">Advanced</div>
+      <div class="level-desc">Professional fluency, university German</div>
+    </div>
+    <div class="level-step">
+      <div class="level-circle c2">C2</div>
+      <div class="level-name">Mastery</div>
+      <div class="level-desc">Native-level mastery, C2 certified</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO BANNER: STUDY ABROAD -->
+<section class="abroad-banner">
+  <img class="bg" src="bhasha/BEYOND THE CLASSROOM/BEYOND THE CLASSROOM.png" alt="Study abroad - Germany"/>
+  <div class="abroad-content fade-up">
+    <div class="section-label" style="color:var(--german-gold);">BEYOND THE CLASSROOM</div>
+    <h2>B2 Isn't the Finish Line. It's Your Boarding Pass.</h2>
+    <p>Once you're job- and university-ready in German, our counsellors take over — application shortlisting, visa documentation,<br/>and interview prep for Germany's universities and employers.</p>
+    <a href="#offers" class="btn-primary btn-shimmer">✈️ Explore Study Abroad Package</a>
+    <div class="abroad-stats">
+      <div>
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Countries our alumni live in</div>
+      </div>
+      <div>
+        <div class="stat-num">50K+</div>
+        <div class="stat-label">Students trained since inception</div>
+      </div>
+      <div>
+        <div class="stat-num">4.9★</div>
+        <div class="stat-label">Average learner rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS IT FOR -->
+<section class="who-section">
+  <div class="section-label">WHO IS THIS FOR</div>
+  <h2 class="section-title">German Is for Everyone</h2>
+  <p class="section-sub">Whether you're a student, professional, or explorer — our German program has a path for you.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-icon-wrap">🎓</div>
+      <div class="who-title">Exam Aspirants</div>
+      <div class="who-desc">Preparing for Goethe-Zertifikat or TELC proficiency exams to study in Germany.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-icon-wrap">💼</div>
+      <div class="who-title">Working Professionals</div>
+      <div class="who-desc">Professionals working with German clients, companies, or planning a career switch abroad.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-icon-wrap">📈</div>
+      <div class="who-title">Career Upskillers</div>
+      <div class="who-desc">Add a high-demand language to your CV and unlock international job opportunities.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-icon-wrap">🌍</div>
+      <div class="who-title">Culture Enthusiasts</div>
+      <div class="who-desc">Anyone fascinated by German culture, films, music, and wanting to communicate authentically.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF (Slider) -->
+<section class="proof-section" id="reviews">
+  <div class="section-label">STUDENT SUCCESS STORIES</div>
+  <h2 class="section-title">Real Students. Real Results. <span class="star-anim">⭐</span></h2>
+  <p class="section-sub">Rated 4.9/5 by 380+ German learners in Pune. Watch their video stories.</p>
+  <div class="proof-slider-wrap">
+    <button class="slider-btn prev" onclick="resetAutoSlide();slideProof(-1)">‹</button>
+    <button class="slider-btn next" onclick="resetAutoSlide();slideProof(1)">›</button>
+    <div class="proof-grid" id="proofGrid">
+      <div class="proof-card">
+        <img class="proof-img" src="https://bhashaworld.com/language-courses/assets/8%20(1)-BnNjNzzM.webp" alt="Neha S." loading="lazy"/>
+        <div class="proof-play" onclick="openVideo('https://bhashaworld.com/wp-content/uploads/2026/03/09.mp4')">▶</div>
+      </div>
+      <div class="proof-card">
+        <img class="proof-img" src="https://bhashaworld.com/language-courses/assets/9%20(1)-npMkWMBQ.webp" alt="Aarav K." loading="lazy"/>
+        <div class="proof-play" onclick="openVideo('https://bhashaworld.com/wp-content/uploads/2026/03/08.mp4')">▶</div>
+      </div>
+      <div class="proof-card">
+        <img class="proof-img" src="https://bhashaworld.com/language-courses/assets/10%20(1)-M8tRobxc.webp" alt="Sneha P." loading="lazy"/>
+        <div class="proof-play" onclick="openVideo('https://bhashaworld.com/wp-content/uploads/2026/03/07.mp4')">▶</div>
+      </div>
+      <div class="proof-card">
+        <img class="proof-img" src="https://bhashaworld.com/language-courses/assets/11-CxPTzZ6B.webp" alt="Madhavi D." loading="lazy"/>
+        <div class="proof-play" onclick="openVideo('https://bhashaworld.com/wp-content/uploads/2026/03/06.mp4')">▶</div>
+      </div>
+      <div class="proof-card">
+        <img class="proof-img" src="https://bhashaworld.com/language-courses/assets/14-vrCNaCiE.webp" alt="Susmita P." loading="lazy"/>
+        <div class="proof-play" onclick="openVideo('https://bhashaworld.com/wp-content/uploads/2026/03/10.mp4')">▶</div>
+      </div>
+      <div class="proof-card">
+        <img class="proof-img" src="https://bhashaworld.com/language-courses/assets/6%20(1)-QHnkDvud.webp" alt="Anand P." loading="lazy"/>
+        <div class="proof-play" onclick="openVideo('https://bhashaworld.com/wp-content/uploads/2026/03/11.mp4')">▶</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div id="videoModal" class="video-modal" onclick="closeVideo()">
+  <div class="video-modal-inner" onclick="event.stopPropagation()">
+    <button class="video-modal-close" onclick="closeVideo()">✕</button>
+    <video id="videoPlayer" controls autoplay playsinline></video>
+  </div>
+</div>
+
+<!-- TRAINERS -->
+<section class="trainers-section">
+  <div class="section-label" style="color:var(--german-gold);">MEET YOUR TRAINERS</div>
+  <h2 class="section-title">Learn from Certified Experts</h2>
+  <p class="section-sub">Our trainers combine language expertise with cultural knowledge for an immersive experience.</p>
+  <div class="trainers-grid">
+    <div class="trainer-card">
+      <img src="New folder (7)/Susmita-Paranjape.webp" alt="Susmita Paranjape"/>
+      <div class="trainer-name">Susmita Paranjape</div>
+      <div class="trainer-role">Senior Executive</div>
+    </div>
+    <div class="trainer-card">
+      <img src="New folder (7)/Shivani-Doshi.webp" alt="Shivani Doshi"/>
+      <div class="trainer-name">Shivani Doshi</div>
+      <div class="trainer-role">Senior Coordinator</div>
+    </div>
+    <div class="trainer-card">
+      <img src="New folder (7)/Yojana L..webp" alt="Yojana L."/>
+      <div class="trainer-name">Yojana L.</div>
+      <div class="trainer-role">Junior Coordinator</div>
+    </div>
+    <div class="trainer-card">
+      <img src="New folder (7)/Mamata D..webp" alt="Mamata D."/>
+      <div class="trainer-name">Mamata D.</div>
+      <div class="trainer-role">Junior Coordinator</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-label">FREQUENTLY ASKED QUESTIONS</div>
+  <h2 class="section-title">Got Questions? We've Got Answers</h2>
+  <p class="section-sub">Everything you need to know about our German course, batches, and certifications.</p>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="idx">01</span>
+        <span class="q-text">I'm a complete beginner. Can I still join the German course?</span>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-a"><p>Absolutely! Our A1 beginner course is specially designed for learners with zero prior knowledge of German. We start with alphabets, pronunciation, and basic phrases — building confidence step by step.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="idx">02</span>
+        <span class="q-text">How long does it take to complete German A1 level?</span>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-a"><p>The A1 level is typically completed in 2.5 to 3 months. Each level takes a similar duration, so A1 to B2 is approximately 10–12 months of consistent learning with us.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="idx">03</span>
+        <span class="q-text">Do you prepare students for Goethe and TELC exams?</span>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-a"><p>Yes! Our curriculum is specifically aligned to Goethe-Zertifikat and TELC exam formats. We provide mock tests, past papers, and dedicated exam strategy sessions from B1 level onwards.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="idx">04</span>
+        <span class="q-text">Are classes available online or only offline in Pune?</span>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-a"><p>Both! We offer live interactive online classes and offline classroom sessions at our Pune centre (FC Road). The teaching quality and batch size are maintained consistently across both modes.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="idx">05</span>
+        <span class="q-text">What does the 1-Year Platform Access offer include?</span>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-a"><p>With our special enrollment offer, you get 1-year access to recorded classes, practice materials, worksheets, and additional learning resources on the Bhasha World platform — completely free.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span class="idx">06</span>
+        <span class="q-text">Do you help with student visa applications for Germany?</span>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-a"><p>Yes. Our Study Abroad package includes guidance for German student visa documentation, university applications, and language certification requirements for visa purposes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="german-stripe-bottom"></div>
+  <div class="cta-urgency-badge cta-reveal"><span class="cta-dot"></span> 🔥 Limited Spots — July Batch Almost Full</div>
+  <h2 class="cta-reveal">Start Speaking <span>German</span> in 30 Days.<br/>Your Bigger Life Starts Now.</h2>
+  <p class="cta-reveal">Book your free demo today — no payment, no commitment. Just <strong style="color:var(--german-gold);">45 minutes</strong> that could change your career.</p>
+  <div class="cta-reveal">
+    <div class="cta-offer-box">
+      <div class="offer-label">🔒 Secure Your Seat Right Now</div>
+      <div class="offer-amount">₹2,000 <span>only</span></div>
+      <div class="offer-terms">Pay remaining after 3 days &nbsp;|&nbsp; Full pay = extra discount 🎁</div>
+    </div>
+  </div>
+  <div class="final-cta-btns cta-reveal">
+    <a href="#" class="btn-primary" onclick="openPopup(); return false;">🎯 Book FREE Demo Class</a>
+    <a href="https://wa.me/918149207363?text=Hi%2C%20I'm%20interested%20in%20the%20German%20course%20at%20Bhasha%20World" target="_blank" class="btn-secondary wa-cta-btn btn-shimmer"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width:20px;height:20px;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>
+  </div>
+  <div class="guarantee-text cta-reveal">
+    <span>🔒 No payment required for demo</span>
+    <span style="opacity:.3">|</span>
+    <span>⏰ Limited seats available</span>
+    <span style="opacity:.3">|</span>
+    <span>📞 Response within 5 mins</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-stripe"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="bhasha/footer logo/logo2.webp" alt="Bhasha World" style="height:46px;width:auto;display:block;"/></div>
+      <p>India's most trusted German language institute with Goethe & TELC certified training. ISO-certified curriculum, real trainers, and results that speak.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#levels">Course Levels</a>
+      <a href="#offers">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <span class="ico">📍</span>
+        <span>4th Floor, Karnik Heritage, FC Road, Pune 411004</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="ico">📞</span>
+        <span><a href="tel:8149207363">8149207363</a> / <a href="tel:8308991969">8308991969</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="ico">✉️</span>
+        <a href="mailto:info@bhashaworld.com">info@bhashaworld.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Bhasha World. All rights reserved.</span>
+    <span>Designed & Crafted by <a href="#">A2 Digital</a> | ISO Certified Language Institute</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918149207363?text=Hi%2C%20I'm%20interested%20in%20the%20German%20course" target="_blank" class="wa-float">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span>Chat on WhatsApp</span>
+</a>
+
+<!-- POPUP FORM -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-box">
+    <div class="popup-header">
+      <div class="popup-german-stripe"></div>
+      <button class="popup-close" onclick="closePopup()">✕</button>
+      <h3>Book Your FREE German Demo</h3>
+      <p>45-minute live class with a certified trainer — completely free, no obligation</p>
+      <div class="popup-urgency">
+        🔴 Batch filling fast — only <strong id="popupSeats">6</strong> seats left for July 20 batch!
+      </div>
+    </div>
+    <div class="popup-body">
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="Your name" required/>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+91 98765 43210" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com"/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Current German Level</label>
+            <select>
+              <option value="">Select level</option>
+              <option>Complete Beginner</option>
+              <option>A1 Beginner</option>
+              <option>A2 Elementary</option>
+              <option>B1 Intermediate</option>
+              <option>B2 Upper-Intermediate</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Goal</label>
+            <select>
+              <option value="">Select goal</option>
+              <option>Study Abroad in Germany</option>
+              <option>Goethe / TELC Certification</option>
+              <option>Career & Job Opportunities</option>
+              <option>Personal Interest</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-popup-submit">🎯 Book My FREE Demo Now →</button>
+      </form>
+      <div class="popup-privacy">🔒 Your data is safe. We'll call you within 5 minutes.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── COUNTDOWN TIMER ──
+  function setCountdown() {
+    const target = new Date();
+    target.setDate(target.getDate() + 5);
+    target.setHours(23, 59, 59, 0);
+
+    function update() {
+      const now = new Date();
+      const diff = target - now;
+      if (diff <= 0) return;
+      const days = Math.floor(diff / 86400000);
+      const hours = Math.floor((diff % 86400000) / 3600000);
+      const mins = Math.floor((diff % 3600000) / 60000);
+      const secs = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+    }
+    update();
+    setInterval(update, 1000);
+  }
+  setCountdown();
+
+  // ── POPUP ──
+  function openPopup() {
+    document.getElementById('popupOverlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePopup() {
+    document.getElementById('popupOverlay').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('popupOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
+  // auto-open after 8 seconds
+  setTimeout(openPopup, 8000);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-popup-submit');
+    btn.textContent = '✅ Demo Booked! We\'ll call you shortly.';
+    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+    btn.style.color = '#fff';
+    setTimeout(closePopup, 2500);
+  }
+
+  // ── MOBILE NAV ──
+  function toggleNav() {
+    document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('navCta').classList.toggle('open');
+    document.getElementById('navToggle').classList.toggle('open');
+  }
+
+  // ── SCROLL ANIMATIONS ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        e.target.style.transitionDelay = (Array.from(e.target.parentElement?.children || []).indexOf(e.target) * 0.08) + 's';
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── VIDEO MODAL ──
+  function openVideo(url) {
+    const modal = document.getElementById('videoModal');
+    const player = document.getElementById('videoPlayer');
+    player.src = url;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideo() {
+    const modal = document.getElementById('videoModal');
+    const player = document.getElementById('videoPlayer');
+    modal.classList.remove('show');
+    player.pause();
+    player.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // ── PROOF SLIDER ──
+  function slideProof(dir) {
+    const grid = document.getElementById('proofGrid');
+    const card = grid.querySelector('.proof-card');
+    if (!card) return;
+    const gap = 20;
+    const scroll = card.offsetWidth + gap;
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    if (dir > 0 && grid.scrollLeft >= maxScroll - 10) {
+      grid.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (dir < 0 && grid.scrollLeft <= 10) {
+      grid.scrollTo({ left: maxScroll, behavior: 'smooth' });
+    } else {
+      grid.scrollBy({ left: dir * scroll, behavior: 'smooth' });
+    }
+  }
+  // Auto-slide every 3s (continuous)
+  let autoSlide = setInterval(() => slideProof(1), 3000);
+  // Pause on hover
+  const grid = document.getElementById('proofGrid');
+  grid.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  grid.addEventListener('mouseleave', () => { autoSlide = setInterval(() => slideProof(1), 3000); });
+  // Reset on manual interaction
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => slideProof(1), 3000);
+  }
+  // Touch swipe
+  (function() {
+    const grid = document.getElementById('proofGrid');
+    if (!grid) return;
+    let startX = 0, scrollLeft = 0, isDown = false;
+    grid.addEventListener('mousedown', e => {
+      isDown = true; grid.classList.add('dragging');
+      startX = e.pageX - grid.offsetLeft;
+      scrollLeft = grid.scrollLeft;
+    });
+    grid.addEventListener('mouseleave', () => {
+      isDown = false; grid.classList.remove('dragging');
+    });
+    grid.addEventListener('mouseup', () => {
+      isDown = false; grid.classList.remove('dragging'); resetAutoSlide();
+    });
+    grid.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - grid.offsetLeft;
+      grid.scrollLeft = scrollLeft - (x - startX);
+    });
+    grid.addEventListener('touchstart', e => {
+      startX = e.touches[0].pageX - grid.offsetLeft;
+      scrollLeft = grid.scrollLeft;
+    }, { passive: true });
+    grid.addEventListener('touchmove', e => {
+      const x = e.touches[0].pageX - grid.offsetLeft;
+      grid.scrollLeft = scrollLeft - (x - startX);
+    }, { passive: true });
+    grid.addEventListener('touchend', resetAutoSlide, { passive: true });
+  })();
+
+  // ── FAQ ──
+  function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) {
+      answer.classList.add('open');
+      item.classList.add('open');
+    }
+  }
+
+  // ── SEATS COUNTDOWN (fake urgency — decrement slowly) ──
+  let seats = 6;
+  function decrementSeats() {
+    if (seats > 2) {
+      const chance = Math.random();
+      if (chance > 0.7) {
+        seats--;
+        document.getElementById('seatsLeft') && (document.getElementById('seatsLeft').textContent = seats);
+        document.getElementById('seatsBar') && (document.getElementById('seatsBar').textContent = seats);
+        document.getElementById('popupSeats') && (document.getElementById('popupSeats').textContent = seats);
+      }
+    }
+    setTimeout(decrementSeats, 45000 + Math.random() * 60000);
+  }
+  decrementSeats();
+</script>
+
+</body>
+</html>
