@@ -1,7 +1,7 @@
 export default function AbroadBanner() {
   return (
     <section className="abroad-banner">
-      <img className="bg" src="/bhasha/BEYOND THE CLASSROOM/BEYOND THE CLASSROOM.png" alt="Study abroad - Germany" />
+      <img className="bg" src="/language-courses/bhasha/BEYOND THE CLASSROOM/BEYOND THE CLASSROOM.png" alt="Study abroad - Germany" />
       <div className="abroad-content fade-up">
         <div className="section-label" style={{ color: 'var(--german-gold)' }}>BEYOND THE CLASSROOM</div>
         <h2>B2 Isn't the Finish Line. It's Your Boarding Pass.</h2>

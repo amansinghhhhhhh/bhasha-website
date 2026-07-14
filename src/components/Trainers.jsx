@@ -1,9 +1,9 @@
 export default function Trainers() {
   const trainers = [
-    { src: '/bhasha/trainer/susmita .webp', name: 'Susmita Paranjape', role: 'Senior Executive' },
-    { src: '/bhasha/trainer/shivani.webp', name: 'Shivani Doshi', role: 'Senior Coordinator' },
-    { src: '/bhasha/trainer/yojana.webp', name: 'Yojana L.', role: 'Junior Coordinator' },
-    { src: '/bhasha/trainer/mamata.webp', name: 'Mamata D.', role: 'Junior Coordinator' },
+    { src: '/language-courses/bhasha/trainer/susmita .webp', name: 'Susmita Paranjape', role: 'Senior Executive' },
+    { src: '/language-courses/bhasha/trainer/shivani.webp', name: 'Shivani Doshi', role: 'Senior Coordinator' },
+    { src: '/language-courses/bhasha/trainer/yojana.webp', name: 'Yojana L.', role: 'Junior Coordinator' },
+    { src: '/language-courses/bhasha/trainer/mamata.webp', name: 'Mamata D.', role: 'Junior Coordinator' },
   ];
 
   return (
