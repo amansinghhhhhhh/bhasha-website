@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
           <div className="footer-contact-item">
             <span className="ico">📞</span>
-            <span><a href="tel:8149207363">8149207363</a> / <a href="tel:8308991969">8308991969</a></span>
+            <span><a href="tel:+919158397363">+91 91583 97363</a></span>
           </div>
           <div className="footer-contact-item">
             <span className="ico">✉️</span>
