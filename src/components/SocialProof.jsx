@@ -110,7 +110,7 @@ export default function SocialProof({ onOpenVideo }) {
           {cards.map((card, i) => (
             <div className="proof-card" key={i}>
               <img className="proof-img" src={card.img} alt={card.alt} loading="lazy" />
-              <div className="proof-play" onClick={() => onOpenVideo(card.video)}>▶</div>
+              <div className="proof-play" onClick={() => onOpenVideo(card.video, card.img)}>▶</div>
             </div>
           ))}
         </div>

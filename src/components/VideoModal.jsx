@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function VideoModal({ videoUrl, onClose }) {
+export default function VideoModal({ videoUrl, poster, onClose }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function VideoModal({ videoUrl, onClose }) {
     <div className="video-modal show" onClick={handleOverlayClick}>
       <div className="video-modal-inner" onClick={handleInnerClick}>
         <button className="video-modal-close" onClick={onClose}>✕</button>
-        <video ref={videoRef} controls autoPlay playsInline>
+        <video ref={videoRef} controls autoPlay playsInline poster={poster}>
           <source src={videoUrl} type="video/mp4" />
         </video>
       </div>

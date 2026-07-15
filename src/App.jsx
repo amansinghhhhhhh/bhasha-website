@@ -19,15 +19,15 @@ import PopupForm from './components/PopupForm.jsx';
 
 export default function App() {
   const [popupOpen, setPopupOpen] = useState(false);
-  const [videoUrl, setVideoUrl] = useState(null);
+  const [videoData, setVideoData] = useState(null);
   const [seats, setSeats] = useState(3);
 
   const openPopup = useCallback(() => setPopupOpen(true), []);
   const closePopup = useCallback(() => setPopupOpen(false), []);
 
-  const openVideo = useCallback((url) => setVideoUrl(url), []);
+  const openVideo = useCallback((url, poster) => setVideoData({ url, poster }), []);
   const closeVideo = useCallback(() => {
-    setVideoUrl(null);
+    setVideoData(null);
     document.body.style.overflow = '';
   }, []);
 
@@ -81,7 +81,7 @@ export default function App() {
       <AbroadBanner />
       <WhoSection />
       <SocialProof onOpenVideo={openVideo} />
-      <VideoModal videoUrl={videoUrl} onClose={closeVideo} />
+      <VideoModal videoUrl={videoData?.url} poster={videoData?.poster} onClose={closeVideo} />
       <Trainers />
       <FAQ />
       <FinalCTA onOpenPopup={openPopup} />
