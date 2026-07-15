@@ -1,3 +1,5 @@
+import AnimatedNum from './AnimatedNum';
+
 export default function AbroadBanner() {
   return (
     <section className="abroad-banner">
@@ -9,15 +11,15 @@ export default function AbroadBanner() {
         <a href="#offers" className="btn-primary btn-shimmer">✈️ Explore Study Abroad Package</a>
         <div className="abroad-stats">
           <div>
-            <div className="stat-num">20+</div>
+            <div className="stat-num"><AnimatedNum target={20} suffix="+" /></div>
             <div className="stat-label">Countries our alumni live in</div>
           </div>
           <div>
-            <div className="stat-num">50K+</div>
+            <div className="stat-num"><AnimatedNum target={50} suffix="K+" /></div>
             <div className="stat-label">Students trained since inception</div>
           </div>
           <div>
-            <div className="stat-num">4.9★</div>
+            <div className="stat-num"><AnimatedNum target={4.9} suffix="★" decimals={1} /></div>
             <div className="stat-label">Average learner rating</div>
           </div>
         </div>

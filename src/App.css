@@ -621,6 +621,7 @@
   .abroad-content p { color: #fff; font-size: 17px; line-height: 1.75; margin-bottom: 30px; }
   .abroad-stats { display: flex; gap: 32px; margin-top: 36px; flex-wrap: wrap; }
   .abroad-stats .stat-num { color: var(--german-gold); font-family: var(--font-heading); font-size: 30px; font-weight: 800; line-height: 1; }
+  .abroad-stats .num { color: var(--german-gold); font-family: var(--font-heading); font-size: 30px; font-weight: 800; line-height: 1; }
   .abroad-stats .stat-label { color: #fff; font-size: 13px; margin-top: 4px; }
   @media(max-width: 700px) { .abroad-banner { padding: 70px 6%; min-height: auto; } }
 
