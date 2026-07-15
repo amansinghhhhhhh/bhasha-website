@@ -1,3 +1,34 @@
+import { useState, useEffect, useRef } from 'react';
+
+function AnimatedNum({ target, suffix, decimals }) {
+  const [val, setVal] = useState(0);
+  const ref = useRef(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !started.current) {
+        started.current = true;
+        const duration = 1500;
+        const start = performance.now();
+        function tick(now) {
+          const t = Math.min((now - start) / duration, 1);
+          const v = t * target;
+          setVal(decimals ? parseFloat(v.toFixed(decimals)) : Math.floor(v));
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.3 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [target, decimals]);
+
+  return <span className="num" ref={ref}>{val}{suffix}</span>;
+}
+
 export default function Hero({ onOpenPopup }) {
   return (
     <section className="hero">
@@ -28,19 +59,19 @@ export default function Hero({ onOpenPopup }) {
         </div>
         <div className="hero-trust">
           <div className="trust-item">
-            <span className="num">50K+</span>
+            <AnimatedNum target={50} suffix="K+" />
             <span className="label">Students Trained</span>
           </div>
           <div className="trust-item">
-            <span className="num">380+</span>
+            <AnimatedNum target={380} suffix="+" />
             <span className="label">German Reviews</span>
           </div>
           <div className="trust-item">
-            <span className="num">20+</span>
+            <AnimatedNum target={20} suffix="+" />
             <span className="label">Countries</span>
           </div>
           <div className="trust-item">
-            <span className="num">4.9★</span>
+            <AnimatedNum target={4.9} suffix="★" decimals={1} />
             <span className="label">Rating</span>
           </div>
         </div>
