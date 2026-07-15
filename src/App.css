@@ -330,6 +330,8 @@
   }
   .trust-item { display: flex; align-items: center; gap: 8px; }
   .trust-item .num { color: var(--german-gold); font-weight: 900; font-size: 20px; }
+  .trust-item:last-child .num { animation: star-bounce 1.2s ease-in-out infinite; }
+  @keyframes star-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
   .trust-item .label { color: rgba(255,255,255,.75); font-size: 13px; }
 
   /* ── COUNTDOWN SECTION ── */
