@@ -1165,7 +1165,7 @@
     100% { transform: translate(-40px, -30px) scale(1.15); opacity: .8; }
   }
   .why-section .section-title { color: #fff; }
-  .why-section .section-sub { color: rgba(255,255,255,.5); }
+  .why-section .section-sub { color: #fff; }
   .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1270,7 +1270,7 @@
     letter-spacing: -.2px;
   }
   .why-desc {
-    color: rgba(255,255,255,.5);
+    color: #fff;
     font-size: 14px;
     line-height: 1.7;
   }
