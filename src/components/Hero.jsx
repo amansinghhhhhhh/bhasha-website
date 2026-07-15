@@ -10,16 +10,13 @@ export default function Hero({ onOpenPopup }) {
           Get Hired, Study Abroad<br/>
           Live Your Bigger Life
         </h1>
-        <p className="hero-sub">
-          ISO-certified live training | Goethe & TELC exam prep | Small batches of 8
-        </p>
         <p className="hero-sub-sub">Study abroad guidance — from A1 Beginner to C2 Advanced</p>
         <div className="hero-certs">
           <span className="cert-badge">✅ ISO Certified</span>
           <span className="cert-badge">🏆 Goethe Prep</span>
           <span className="cert-badge">📜 TELC Ready</span>
           <span className="cert-badge">✈️ Visa Guidance</span>
-          <span className="cert-badge">⭐ 4.9/5 Rated</span>
+
         </div>
         <div className="hero-cta-group">
           <a href="#" className="btn-primary btn-shimmer" onClick={(e) => { e.preventDefault(); onOpenPopup(); }}>

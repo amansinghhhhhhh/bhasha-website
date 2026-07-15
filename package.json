@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "copy /Y index.vite.html index.html && vite",
     "build": "vite build && copy /Y dist\\index.vite.html index.html && if exist assets rmdir /S /Q assets && xcopy /E /I /Y dist\\assets assets\\ && if exist bhasha rmdir /S /Q bhasha && xcopy /E /I /Y dist\\bhasha bhasha\\",
     "preview": "vite preview"
   },
