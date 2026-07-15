@@ -929,6 +929,16 @@
     padding: 4px 16px;
     border-radius: 50px;
     margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pricing-save::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.5), transparent);
+    transform: translateX(-100%);
+    animation: btn-shimmer 2.5s ease-in-out infinite;
+    pointer-events: none;
   }
 
   .pricing-features {
